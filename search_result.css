@@ -1,0 +1,140 @@
+body {
+    padding-top: 0px;
+}
+
+.info-content {
+    display: inline;
+}
+
+.info-header {
+    font-weight: bold;
+}
+
+
+.contain-img { 
+    height: 240px;
+    width: 300px;
+    background-color: black;
+    float: left;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.contain-img img {
+    display: block;
+    margin: auto;
+}
+
+.portrait img {
+    width: 100%;
+}
+.landscape img {
+    height: 100%;
+}
+
+.navbar {
+    background-color: black;
+    border-radius: 0px;
+}
+
+.navbar .navbar-header .navbar-brand {
+    color: white;
+}
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 500px;
+    }
+}
+
+/*Panel tabs*/
+
+.panel-tabs {
+    position: relative;
+    bottom: 30px;
+    clear:both;
+    border-bottom: 1px solid transparent;
+}
+
+.panel-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.panel-tabs > li > a {
+    margin-right: 1px;
+    margin-top: 4px;
+    line-height: .85;
+    border: 1px solid transparent;
+    border-radius: 3px 3px 0 0;
+    color: #ffffff;
+}
+
+.panel-tabs > li > a:hover {
+    border-color: transparent;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: rgba(255,255,255, .23);
+    border-bottom-color: transparent;
+}
+
+#tab-panel {
+    background-color: black;
+    border-color: black;
+}
+
+#card {
+    border-color: black;
+    border-style: solid;
+}
+  
+.card {
+    margin: 1.5rem;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+h3 {
+    text-align: left;
+    margin-bottom: 10px;
+    background-color: black;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 17px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: white;
+}
+
+h2 {
+    background-color: mediumaquamarine;
+    color: white;
+    font-size: 20px;
+    border-radius: 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 10px;
+}
+
+
+  
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+      
+        <link href="search_result.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">National Park Service</a>
+                </div>
+               
+        </nav>  
+
+        <!--Panel with Tabs Bootsnipp Template by Cyruxx (https://bootsnipp.com/snippets/v8EE)-->
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary" id="card">
+                    <div class="panel-heading" id="tab-panel">
+                        <h5 class="panel-title" id="title">Loading...</h5>
+                        <span class="pull-right">
+                            <!-- Tabs -->
+                            <ul class="nav panel-tabs" id="tabs">
+                                <li class="active"><a href="#tab1" data-toggle="tab">Info</a></li>
+                                <li><a href="#tab2" data-toggle="tab">Visitor Centers</a></li>
+                                <li><a href="#tab3" data-toggle="tab">Campgrounds</a></li>
+                                <li><a href="#tab4" data-toggle="tab">Alerts</a></li>
+                                <li><a href="#tab5" data-toggle="tab">Articles</a></li>
+                                <li><a href="#tab6" data-toggle="tab">Events</a></li>
+                                <li><a href="#tab7" data-toggle="tab">News Releases</a></li>
+                                <li><a href="#tab8" data-toggle="tab">Education</a></li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <p class="info-content info-header">State(s):</p> 
+                                <p class="info-content" id="park-state"></p>
+                                <br>
+                                <p class="info-content info-header">Description:</p> 
+                                <p class="info-content" id="park-des"></p>
+                                <br>
+                                <p class="info-content info-header">Directions:</p> 
+                                <p class="info-content" id="park-dir"></p>
+                                <br>
+                                <p class="info-content info-header">Associated Site:</p> 
+                                <p class="info-content" id="park-site"></p>
+                                <br>
+                                <div id="map"></div>
+                            </div>
+                            <div class="tab-pane" id="tab2"></div>
+                            <div class="tab-pane" id="tab3"></div>
+                            <div class="tab-pane" id="tab4"></div>
+                            <div class="tab-pane" id="tab5"></div>
+                            <div class="tab-pane" id="tab6"></div>
+                            <div class="tab-pane" id="tab7"></div>
+                            <div class="tab-pane" id="tab8"></div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+
+        <!--Javascript Files-->
+        <script src="search_result.js"></script>
+        
+    </body>
+</html>
