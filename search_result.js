@@ -13,12 +13,68 @@ function start(){
         .then(function (data) {
             var park = data.data[0];
 
-            document.getElementById('title').innerHTML = park.fullName;
-            document.getElementById('park-state').innerHTML = park.states;
-            document.getElementById('park-des').innerHTML = park.description;
-            document.getElementById('park-dir').innerHTML = park.directionsUrl;
-            document.getElementById('park-site').innerHTML = park.url;
+            var app = document.getElementById('tab1');
+            var contain = document.createElement('div');
+            contain.setAttribute('class', 'contain');
+            app.appendChild(contain);  
 
+            document.getElementById('title').innerHTML = park.fullName;
+
+            //state
+            var main_title_state = document.createElement('p')
+            main_title_state.setAttribute('class', 'info-content info-header')
+            main_title_state.textContent = 'State(s): '
+
+            var main_state = document.createElement('p')
+            main_state.setAttribute('class', 'info-content')
+            main_state.textContent = park.states;
+
+             //description
+             var main_title_des = document.createElement('p')
+             main_title_des.setAttribute('class', 'info-content info-header')
+             main_title_des.textContent = 'Description: '
+ 
+             var main_des = document.createElement('p')
+             main_des.setAttribute('class', 'info-content')
+             main_des.textContent = park.description;
+
+            //directions
+            var main_title_dir = document.createElement('p')
+            main_title_dir.setAttribute('class', 'info-content info-header')
+            main_title_dir.textContent = 'Directions: '
+
+            var main_dir = document.createElement('a')
+            main_dir.setAttribute('class', 'info-content')
+            main_dir.textContent = park.directionsUrl;
+            main_dir.setAttribute('href', park.directionsUrl)
+            main_dir.setAttribute('target', '_blank')
+
+            //site
+            var main_title_site = document.createElement('p')
+            main_title_site.setAttribute('class', 'info-content info-header')
+            main_title_site.textContent = 'Associated Site: '
+
+            var main_site = document.createElement('a')
+            main_site.setAttribute('class', 'info-content')
+            main_site.textContent = park.url;
+            main_site.setAttribute('href', park.url)
+            main_site.setAttribute('target', '_blank')
+
+            contain.appendChild(main_title_state)
+            contain.appendChild(main_state)
+            var break_line1 = document.createElement('br');
+            contain.appendChild(break_line1)
+            contain.appendChild(main_title_des)
+            contain.appendChild(main_des)
+            var break_line2 = document.createElement('br');
+            contain.appendChild(break_line2)
+            contain.appendChild(main_title_dir)
+            contain.appendChild(main_dir)
+            var break_line3 = document.createElement('br');
+            contain.appendChild(break_line3)
+            contain.appendChild(main_title_site)
+            contain.appendChild(main_site)
+            
             
         })
         .catch(function (err) {
@@ -70,18 +126,22 @@ function start(){
                 vc_title_dir.setAttribute('class', 'info-content info-header')
                 vc_title_dir.textContent = 'Directions: '
 
-                var vc_dir = document.createElement('p')
+                var vc_dir = document.createElement('a')
                 vc_dir.setAttribute('class', 'info-content')
                 vc_dir.textContent = arr_vc[i].directionsUrl;
+                vc_dir.setAttribute('href', arr_vc[i].directionsUrl)
+                vc_dir.setAttribute('target', '_blank')
 
                 //site
                 var vc_title_site = document.createElement('p')
                 vc_title_site.setAttribute('class', 'info-content info-header')
                 vc_title_site.textContent = 'Associated Site: '
 
-                var vc_site = document.createElement('p')
+                var vc_site = document.createElement('a')
                 vc_site.setAttribute('class', 'info-content')
                 vc_site.textContent = arr_vc[i].url;
+                vc_site.setAttribute('href', arr_vc[i].url)
+                vc_site.setAttribute('target', '_blank')
 
                 contain.appendChild(card)
                 card.appendChild(vc_name) 
@@ -152,9 +212,11 @@ function start(){
                 cg_title_dir.setAttribute('class', 'info-content info-header')
                 cg_title_dir.textContent = 'Directions: '
 
-                var cg_dir = document.createElement('p')
+                var cg_dir = document.createElement('a')
                 cg_dir.setAttribute('class', 'info-content')
                 cg_dir.textContent = arr_cg[i].directionsUrl;
+                cg_dir.setAttribute('href', arr_cg[i].url)
+                cg_dir.setAttribute('target', '_blank')
 
                 //regulations
                 var cg_title_reg = document.createElement('p')
@@ -279,9 +341,12 @@ function start(){
                 ar_title_site.setAttribute('class', 'info-content info-header')
                 ar_title_site.textContent = 'Associated Site: '
 
-                var ar_site = document.createElement('p')
+                var ar_site = document.createElement('a')
                 ar_site.setAttribute('class', 'info-content')
                 ar_site.textContent = arr_ar[i].url
+                ar_site.setAttribute('href', arr_ar[i].url)
+                ar_site.setAttribute('target', '_blank')
+                
 
                 //description
                 var ar_title_des = document.createElement('p')
@@ -500,9 +565,12 @@ function start(){
                 nw_title_site.setAttribute('class', 'info-content info-header')
                 nw_title_site.textContent = 'Associated Site: '
 
-                var nw_site = document.createElement('p')
+                var nw_site = document.createElement('a')
                 nw_site.setAttribute('class', 'info-content')
                 nw_site.textContent = arr_nw[i].url
+                nw_site.setAttribute('href', arr_nw[i].url)
+                nw_site.setAttribute('target', '_blank')
+
 
                 //description
                 var nw_title_des = document.createElement('p')
@@ -613,9 +681,11 @@ function start(){
                 lp_title_site.setAttribute('class', 'info-content info-header')
                 lp_title_site.textContent = 'Associated Site: '
 
-                var lp_site = document.createElement('p')
+                var lp_site = document.createElement('a')
                 lp_site.setAttribute('class', 'info-content')
                 lp_site.textContent = arr_lp[i].url
+                lp_site.setAttribute('href', arr_lp[i].url)
+                lp_site.setAttribute('target', '_blank')
 
                 //description
                 var lp_title_des = document.createElement('p')
@@ -700,9 +770,11 @@ function start(){
                 pp_title_site.setAttribute('class', 'info-content info-header')
                 pp_title_site.textContent = 'Associated Site: '
 
-                var pp_site = document.createElement('p')
+                var pp_site = document.createElement('a')
                 pp_site.setAttribute('class', 'info-content')
                 pp_site.textContent = arr_pp[i].url
+                pp_site.setAttribute('href', arr_pp[i].url)
+                pp_site.setAttribute('target', '_blank')
 
                 //description
                 var pp_title_des = document.createElement('p')
@@ -783,9 +855,11 @@ function start(){
                 pl_title_site.setAttribute('class', 'info-content info-header')
                 pl_title_site.textContent = 'Associated Site: '
 
-                var pl_site = document.createElement('p')
+                var pl_site = document.createElement('a')
                 pl_site.setAttribute('class', 'info-content')
                 pl_site.textContent = arr_pl[i].url
+                pl_site.setAttribute('href', arr_pl[i].url)
+                pl_site.setAttribute('target', '_blank')
 
                 //description
                 var pl_title_des = document.createElement('p')
@@ -826,6 +900,11 @@ function start(){
         });
     
 }
+
+
+
+
+
 
 window.onload = start();
 
