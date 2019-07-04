@@ -195,11 +195,11 @@ function displayResults(compiled_json, contain, start_index) {
             localStorage.setItem('parkPass', JSON.stringify(compiled_json[this.id]));
             console.log(compiled_json[this.id]);
             window.location.href = 'search_result.html';
-            //localStorage.setItem('defaultReportData', JSON.stringify(arr[1]));
+            
         }, false);
 
         const h1 = document.createElement('h1')
-        h1.textContent = current_park.fullName
+        h1.textContent = current_park.fullName + ' - ' + '(' + current_park.states + ')'
 
         const p = document.createElement('p')
         current_park.description = current_park.description.substring(0, 300)
